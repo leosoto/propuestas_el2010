@@ -1,0 +1,62 @@
+%  
+%  This template was created in order to facilitate the Call for 
+%  Papers process for "Encuentro Linux 2009" and modified to be
+%  used by upcoming events.
+%  
+%  --------------------------------------------------------------
+%
+%  History
+%
+%  Version 1: (2009)  
+%   - Author: Arturo A. Hoffstadt Urrutia <ahoffsta@inf.utfsm.cl>
+%   - EL2009 version.
+%  Version 2: (27/07/2010)
+%   - Author: Miguel Angel Ruiz Manzano <mruiz@openminds.cl>
+%   - EL2010 version.
+%   - Licenced under GPL.
+%  Version 2.1: (06/08/2010)
+%   - Author: Miguel Angel Ruiz Manzano <mruiz@openminds.cl>
+%   - License update. The previous one was not well defined.
+%
+%  --------------------------------------------------------------
+%
+%  This file is distributed under the terms and conditions of the 
+%  Attribution-NonCommercial-ShareAlike 3.0 Unported license. For
+%  more information, please visit the following URL
+%  
+%  http://creativecommons.org/licenses/by-nc-sa/3.0/
+%
+%
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
+   {-3.25ex plus -1ex minus -0.2ex}%
+   {1.5ex plus 0.2ex}%
+   {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\stepcounter{secnumdepth}
+\stepcounter{tocdepth}
+
+\title{Un tour por Java, Scala, \\ Python, Ruby y Javascript}
+\author{Leo Soto M.\\ \url{leo.soto@gmail.com}}
+\date{\today}
+
+\begin{document}
+\input{content.tex}
+\newpage
+
+\appendix
+\input{author.tex}
+
+\end{document}

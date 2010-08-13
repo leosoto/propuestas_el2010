@@ -1,0 +1,169 @@
+\begin{minipage}{0.1in}
+  \includegraphics[width=1.2in]{images/logo.png}
+\end{minipage}
+\hfill
+\begin{minipage}{6in}
+  \maketitle
+\end{minipage}
+\hfill
+\begin{minipage}{7in}
+%cambiar por su logo
+%  \includegraphics[width=1.2in]{images/logo.png}
+\end{minipage}
+  \thispagestyle{empty}
+
+\begin{abstract}
+  
+  Introducción a elementos y técnicas de programación de 5 lenguajes, motivadas
+  por un problema en que un cierto servicio remoto puede fallar en forma
+  aleatoria. Las soluciones son comparadas por el nivel de expresividad que da
+  cada lenguaje para que la implementación sea lo mas declarativa posible.
+
+\end{abstract}
+
+\textbf{Palabras Claves:} Código Abierto, Linux, Creative Commons, Lenguajes de
+programación, Java, Scala, Ruby, Python, Javascript.
+
+\section*{Introducción}
+
+En los tiempos actuales proliferan los lenguajes de programación. El índice
+TIOBE\cite{TIOBE} lista al menos 100 lenguajes usados por la industria. Es
+interesante notar como, para casi todos los lenguajes de la lista de los 20 mas
+populares, existen implementaciones open source. De hecho, en muchos casos, la
+evolución del lenguaje va de la mano de un proyecto open source, como es el caso
+de PHP, Python, Perl, Ruby, Clojure y Go.
+
+\section*{Motivación}
+
+Cada lenguaje tiene sus fortalezas y debilidades. Existen lenguajes muy
+expresivos y productivos, pero que no tienen un rendimiento muy impresionante en
+tiempo de ejecución. Existen otros que balancean el contar con abstracciones
+modernas como POO sin sacrificar eficiencia. Y otros en que poco importan sus
+limitaciones si los efectos de red de contar con una comunidad enorme compensan
+cualquier problema de diseño o de rendimiento que pudiera existir.
+
+En este escenario, un desarrollador debe saber escoger el lenguaje adecuado para
+cada problema. Este trabajo da una mirada a varios lenguajes, con un enfoque
+práctico dirigido por un problema concreto extraído de un proyecto real, y
+destacando construcciones básicas de cada lenguaje tanto en el paradigma de la
+programación orientada a objetos como de programación funcional.
+
+\section*{Desarrollo del Tema}
+
+El problema escogido para dirigir el tour es uno muy sencillo: un cierto
+servicio falla en forma frecuente por lo que se debe de reintentar la llamada en
+repetidas ocasiones, esperando un cierto tiempo antes de dicho reintento. El
+problema está inspirado en el contexto real de servicios webs que limitan la
+cantidad de peticiones en un período de tiempo, como Google Maps.
+
+El objetivo es que la solución sea reusable para reintentar cualquier llamada a
+un servicio o API y que el código sea lo mas claro posible.
+
+Se desarrollaron soluciones en: Java, Scala, Python, Ruby y Javascript (todos
+lenguajes donde las implementaciones de referencia son open source). Dichas
+soluciones están disponibles en \url{http://tinyurl.com/2cr2vrl}. A continuación
+se detallan los puntos a destacar en cada implementación:
+
+\subsubsection*{Java}
+
+\begin{itemize}
+\item Se intentan soluciones en dos paradigmas: funcional y orientado a
+  objetos. El funcional resulta más cercano al problema, pero el orientado a
+  objetos es mas fácil de implementar en el lenguaje.
+\item Se muestra la técnica de encadenamiento de métodos para hacer el API mas
+  legible.
+\end{itemize}
+
+\subsubsection*{Scala}
+
+\begin{itemize}
+\item Tipado fuerte, pero con inferencia de tipos para que el desarrollador no
+  deba especificarlos todo el tiempo.
+\item El lenguaje mezcla los paradigmas funcional y orientado a objetos. Se
+  escogen las primitivas funcionales.
+\item La solución usa los ``endulzantes sintácticos'' de Scala para que la
+  funcionalidad de reintentos se asemeje a una construcción incluida en el
+  lenguaje mismo.
+\end{itemize}
+
+\subsubsection*{Python}
+
+\begin{itemize}
+\item Sintaxis concisa. El problema se resuelve de manera más simple en un
+  lenguaje dinámico.
+\end{itemize}
+
+\subsubsection*{Ruby}
+
+\begin{itemize}
+\item Similar a Python, pero con distintas primitivas del lenguaje. Comparación
+  de dichas primitivas.
+\item Al igual que en el caso de Scala, la solución da la impresión de que es
+  parte del propio lenguaje.
+\end{itemize}
+
+\subsubsection*{Javascript}
+
+\begin{itemize}
+\item ¡Se pueden escribir programas de propósito general en Javascript, usando
+  un intérprete como Mozilla Spidermonkey o Google V8 (ambos open source)!
+\item Solución más similar a Python/Ruby que a Java. El nombre es engañoso.
+\end{itemize}
+
+\subsubsection*{Conclusión}
+
+Como conclusión se revisan las abstracciones que encajan con el problema y
+cuales son implementadas por qué lenguaje de los vistos:
+
+\begin{itemize}
+\item Funciones de primera clase: Scala, Python y Javascript.
+\item Funciones anónimas multi-línea: Scala y Javascript.
+\item Sintaxis especial para bloques: Ruby (y en cierta medida Scala, pero
+  mediante ``endulzante sintáctico'').
+\item \emph{Matching} de excepciones dinámico: Python y Ruby.
+\item Parámetros con nombre (``\emph{keyword} arguments''): Scala y Python.
+\item Extensión de objetos predefinidos: Scala y Ruby.
+\end{itemize}
+
+En consecuencia, ni siquiera para este acotado problema hay un solo lenguaje
+ideal. Scala suma la mayor cantidad de abstracciones útiles, pero la
+implementación en Python es la mas concisa, seguida de cerca por la
+implementación en Ruby, que cuenta con la ventaja de funcionar mejor cuando el
+``servicio'' consiste en mas de úna línea de código.
+
+Y así es la vida. No hay \emph{un} lenguaje ideal. Y es por eso que como
+desarrolladores debemos manejar una gama de lenguajes. Y en lugar de usar sólo
+un lenguaje como el único martillo que nos hace ver todos los problemas como
+clavos, saber escoger el lenguaje correcto para resolver los problemas que
+enfrentamos.
+
+\begin{thebibliography}{}
+
+ \bibitem{TIOBE} TIOBE, \textit{Programming Community Index},
+   \url{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html}
+   
+\end{thebibliography}
+
+\newpage
+
+\begin{description}
+ \item[Área en la que se centra el trabajo:] Desarrollo de software
+ \item[Nivel:] Básico
+ \item[Enfoque de la presentación:] La presentación sigue las soluciones al
+   problema, intentando mostrar ciertas construcciones particulares de cada
+   lenguaje pero estableciendo el modelo general de cada lenguaje:
+  \begin{itemize}
+   \item Java: Orientación a objetos popular.
+   \item Scala: Fusión entre programación funcional y orientación a objetos.
+   \item Python: Orientación a objetos basada en atributos
+   \item Ruby: Orientación a objetos basada en mensajes
+   \item Javascript: Basado en atributos, también usable como lenguaje
+     funcional.
+  \end{itemize}
+\end{description}
+
+
+
+
+
+

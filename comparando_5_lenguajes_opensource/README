@@ -1,0 +1,28 @@
+#
+#  This file is distributed under the terms and conditions of the
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported license. For
+#  more information, please visit the following URL
+#
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/
+#
+#  --------------------------------------------------------------
+#
+#  History
+#
+#  Version 1: (27/07/2010)
+#   - Author: Miguel Angel Ruiz Manzano <mruiz@openminds.cl>
+#  Version 1.1: (06/08/2010)
+#   - Author: Miguel Angel Ruiz Manzano <mruiz@openminds.cl>
+#   - Adopted Attribution-NonCommercial-ShareAlike 3.0 Unported
+#   as license.
+#
+
+
+Para generar los archivos PDF:
+
+$ make
+
+Para eliminar los archivos generados:
+
+$ make clean
+
